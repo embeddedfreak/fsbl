@@ -1,0 +1,11 @@
+This README gives brief background of Versal Base platform's HW and SW components of HWEmulation.
+1. HW components
+    a. QEMU Emulator for emulating Versal PS and PMC: Binaries of these QEMU and picked from yocto builds
+        /proj/yocto/versal/qemu_delivery/linux_sdk/linux_01280917/petalinux-glibc-x86_64-petalinux-image-minimal-aarch64-toolchain.sh
+    
+    b. Dtbs(devices tree binaries) are generated from dts picked from EA build of Git repository.
+        EA build $>git clone https://gitenterprise.xilinx.com/QEMU/dts -b ea
+        Git revision number or commit id: 5c23755443125b373db9e80fbfdd67d8b56aca2a
+
+2. SW components
+    a. Pmc_fw.elf and static configuration of pmc are generated from SDK using base versal platform

@@ -1,0 +1,17 @@
+##############################################################################
+# Copyright (C) 1986-2020 Xilinx, Inc. All rights reserved.
+# SPDX-License-Identifier: MIT
+##
+#############################################################################
+
+OPTION psf_version = 2.1;
+
+BEGIN driver v_demosaic
+
+ OPTION supported_peripherals = (v_demosaic_v1_0 );
+ OPTION driver_state = DEPRECATED;
+ OPTION copyfiles = all;
+ OPTION name = v_demosaic;
+ OPTION version = 1.0;
+
+END driver

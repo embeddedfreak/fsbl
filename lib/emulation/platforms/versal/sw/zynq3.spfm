@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdx:platform sdx:vendor="xilinx.com"
+              sdx:library="sdx"
+              sdx:name="everest"
+              sdx:version="1.0"
+              sdx:schemaVersion="1.0"
+              xmlns:sdx="http://www.xilinx.com/sdx">
+    <sdx:description>
+A basic platform targeting the ZCU102 evaluation board, which includes 4GB of DDR4 for the Processing System, 2GB of DDR4 for the Programmable Logic, 2x64MB Quad-SPI Flash and an SDIO card interface. More information at https://www.xilinx.com/products/boards-and-kits/zcu106.html
+    </sdx:description>
+    <sdx:systemConfigurations sdx:defaultConfiguration="r5_standalone">
+        <sdx:configuration sdx:name="a72_linux"
+                           sdx:displayName="A72 Linux"
+                           sdx:defaultProcessorGroup="a72_linux"
+                           sdx:runtimes="cpp">
+            <sdx:description>a72_linux</sdx:description>
+            <sdx:prebuilt sdx:data="a72_linux/a72_linux/prebuilt"/>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif="a72_linux/boot/linux.bif"
+                            sdx:imageData="a72_linux/a72_linux/image"
+                            sdx:mountPath="/mnt"
+                            sdx:readme="a72_linux/boot/generic.readme"
+                            sdx:qemuArguments="a72_linux/qemu/pmu_args.txt:a72_linux/qemu/qemu_args.txt"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="a72_linux"
+                                sdx:displayName="a72_linux"
+                                sdx:cpuType="cortex-a72">
+                <sdx:os sdx:name="linux"
+                        sdx:displayName="linux"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+        <sdx:configuration sdx:name="a72_standalone"
+                           sdx:displayName="A72 Standalone"
+                           sdx:defaultProcessorGroup="a72_standalone"
+                           sdx:runtimes="cpp">
+            <sdx:description>a72_standalone</sdx:description>
+            <sdx:prebuilt sdx:data="a72_standalone/a72_standalone/prebuilt"/>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif="a72_standalone/boot/standalone.bif"
+                            sdx:readme="a72_standalone/boot/generic.readme"
+                            sdx:qemuArguments="a72_standalone/qemu/pmu_args.txt:a72_standalone/qemu/qemu_args.txt"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="a72_standalone"
+                                sdx:displayName="a72_standalone"
+                                sdx:cpuType="cortex-a72"
+                                sdx:cpuInstance="psu_cortexa72_0">
+                <sdx:os sdx:name="standalone"
+                        sdx:displayName="standalone"
+                        sdx:ldscript="a72_standalone/a72_standalone/lscript.ld"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+        <sdx:configuration sdx:name="ocl"
+                           sdx:displayName="A72 OpenCL Linux"
+                           sdx:defaultProcessorGroup="ocl"
+                           sdx:runtimes="ocl">
+            <sdx:description>ocl</sdx:description>
+            <sdx:prebuilt sdx:data="ocl/ocl/prebuilt"/>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif="ocl/boot/linux.bif"
+                            sdx:imageData="ocl/ocl/image"
+                            sdx:mountPath="/mnt"
+                            sdx:readme="ocl/boot/generic.readme"
+                            sdx:qemuArguments="ocl/qemu/pmu_args.txt:ocl/qemu/qemu_args.txt"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="ocl"
+                                sdx:displayName="ocl"
+                                sdx:cpuType="cortex-a72">
+                <sdx:os sdx:name="linux"
+                        sdx:displayName="linux"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+        <sdx:configuration sdx:name="r5_standalone"
+                           sdx:displayName="R5 Standalone"
+                           sdx:defaultProcessorGroup="r5_standalone"
+                           sdx:runtimes="cpp">
+            <sdx:description>r5_standalone</sdx:description>
+            <sdx:prebuilt sdx:data="r5_standalone/r5_standalone/prebuilt"/>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif="r5_standalone/boot/standalone.bif"
+                            sdx:readme="r5_standalone/boot/generic.readme"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="r5_standalone"
+                                sdx:displayName="r5_standalone"
+                                sdx:cpuType="cortex-r5"
+                                sdx:cpuInstance="psu_cortexr5_0">
+                <sdx:os sdx:name="standalone"
+                        sdx:displayName="standalone"
+                        sdx:ldscript="r5_standalone/r5_standalone/lscript.ld"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+    </sdx:systemConfigurations>
+</sdx:platform>

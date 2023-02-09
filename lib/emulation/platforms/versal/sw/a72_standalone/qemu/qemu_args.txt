@@ -1,0 +1,16 @@
+-M
+arm-generic-fdt
+-display
+none
+-serial
+null
+-serial
+null
+-serial
+mon:stdio
+-sync-quantum
+"1000000000"
+-boot
+mode=1
+-hw-dtb
+<a72_standalone/qemu/board-versal-ps-cosim-virt.dtb>

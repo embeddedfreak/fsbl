@@ -1,0 +1,37 @@
+{
+  "psConfig": {
+    "container": {
+      "name": "ps",
+      "apmNodes": []
+    }
+  },
+  "plConfig": {
+    "otherContainer": {
+      "name": "other",
+      "apmNodes": []
+    },
+    "mdmContainers": [
+      {
+        "name": "mdm_0",
+        "apmNodes": [
+          {
+            "id": "axi_perf_mon_0",
+            "name": "axi_perf_mon_0",
+            "isSelected": true,
+            "apmSlots": [
+              {
+                "id": "SLOT_0_AXI",
+                "name": "SLOT_0",
+                "slotNo": 0,
+                "isSelected": true
+              }
+            ],
+            "baseAddr": "0x44A00000",
+            "frequency": "100000000",
+            "isProfilingEnabled": true
+          }
+        ]
+      }
+    ]
+  }
+}
