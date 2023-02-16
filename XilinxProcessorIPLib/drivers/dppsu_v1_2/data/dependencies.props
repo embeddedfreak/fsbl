@@ -1,3 +1,0 @@
-xdppsu_intr_example.c=xdppsu_example_common.h,xdppsu_example_common.c
-xdppsu_selftest_example.c=xdppsu_selftest_example.c
-xdppsu_poll_example.c=xdppsu_example_common.h,xdppsu_example_common.c

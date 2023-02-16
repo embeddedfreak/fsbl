@@ -1,3 +1,0 @@
-vdma.c=vdma_api.c
-xaxivdma_example_intr.c=xaxivdma_example_intr.c
-xaxivdma_example_selftest.c=xaxivdma_example_selftest.c
