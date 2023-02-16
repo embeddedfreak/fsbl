@@ -1,0 +1,23 @@
+###############################################################################
+# Copyright (C) 2017 - 2020 Xilinx, Inc.  All rights reserved.
+# SPDX-License-Identifier: MIT
+#
+###############################################################################
+#
+# MODIFICATION HISTORY:
+# Ver      Who    Date     Changes
+# -------- ------ -------- --------------------------------------------------
+# 1.0      sa     04/05/17 First release
+##############################################################################
+
+OPTION psf_version = 2.1;
+
+BEGIN driver tmr_inject
+
+  OPTION supported_peripherals = (tmr_inject);
+  OPTION driver_state = ACTIVE;
+  OPTION copyfiles = all;
+  OPTION VERSION = 1.2;
+  OPTION NAME = tmr_inject;
+
+END driver
